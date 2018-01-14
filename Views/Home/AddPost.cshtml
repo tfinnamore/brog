@@ -1,0 +1,60 @@
+﻿@model ArticleAddViewModel
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/img/post-bg.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Add an Article</h1>
+              <h2 class="subheading">Add a new blog article by filling out the fields below</h2>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+
+			<form action="/home/AddPost" method="post" asp-antiforgery="true">
+                <p>
+                    <label asp-for="title"></label>
+                    <input asp-for="title" />
+					<span asp-validation-for="title"></span>
+
+				</p>
+				<p>
+					<label asp-for="teaser"></label>
+                    <input asp-for="teaser" />
+                    <span asp-validation-for="teaser"></span>
+                </p>
+				<p>
+				    <label asp-for="articleBody"></label>
+				</p>
+				<p>
+					<textarea asp-for="articleBody"></textarea>
+                    
+                </p>
+				<p>
+                    <button type="submit">Post</button>
+                </p>
+				
+                
+					
+			</form>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+
+
+<script src="https://cdn.ckeditor.com/4.6.1/standard-all/ckeditor.js"></script>
+<script src="/js/ckedit.js"></script>

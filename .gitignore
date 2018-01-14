@@ -1,0 +1,7 @@
+bin/*
+obj/*
+/appsettings*
+Properties/*
+/*.db
+.DS_Store
+/*.userprefs
